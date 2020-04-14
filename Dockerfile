@@ -1,4 +1,5 @@
-FROM alpine:3.10
+FROM connectical/tor
+USER root
 ENTRYPOINT ["/sbin/tini","--","/usr/local/searx/dockerfiles/docker-entrypoint.sh"]
 EXPOSE 8080
 VOLUME /etc/searx
@@ -29,6 +30,7 @@ WORKDIR /usr/local/searx
 
 
 COPY requirements.txt ./requirements.txt
+COPY torrc /etc/tor/torrc
 
 RUN apk upgrade --no-cache \
  && apk add --no-cache -t build-dependencies \

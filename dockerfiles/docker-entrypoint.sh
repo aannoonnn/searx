@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sed -i 's/var\/lib\/tor:\/sbin\/nologin/var\/lib\/tor:\/bin\/ash/g' /etc/passwd
+su tor -c 'tor RunAsDaemon 1'
 export SEARX_VERSION=$(su searx -c 'python3 -c "import six; import searx.version; six.print_(searx.version.VERSION_STRING)"')
 printf 'searx version %s\n\n' "${SEARX_VERSION}"
 
