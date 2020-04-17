@@ -1,6 +1,6 @@
 general:
     debug : False # Debug mode, only for development
-    instance_name : "Have searx" # displayed name
+    instance_name : "searx" # displayed name
 
 search:
     safe_search : 0 # Filter results. 0: None, 1: Moderate, 2: Strict
@@ -12,7 +12,7 @@ search:
 server:
     port : 8888
     bind_address : "127.0.0.1" # address to listen on
-    secret_key : "rJUht+bxZOyonTUj9R3mOHBDdKePPBQV70ekbd6oC0Q=" # change this!
+    secret_key : "5up3r_53cr37_k3y!!!" # change this!
     base_url : False # Set custom base_url. Possible values: False or "https://your.custom.host/location/"
     image_proxy : False # Proxying image results through searx
     http_protocol_version : "1.0"  # 1.0 and 1.1 are supported
@@ -34,7 +34,7 @@ ui:
 #    key : !!binary "your_morty_proxy_key"
 
 outgoing: # communication with search engines
-    request_timeout : 5.0 # default timeout in seconds, can be override by engine
+    request_timeout : 7.0 # default timeout in seconds, can be override by engine
     # max_request_timeout: 10.0 # the maximum timeout in seconds
     useragent_suffix : "" # suffix of searx_useragent, could contain informations like an email address to the administrator
     pool_connections : 100 # Number of different hosts
@@ -195,13 +195,11 @@ engines:
   - name : duckduckgo
     engine : duckduckgo
     shortcut : ddg
-    disabled : True
 
   - name : duckduckgo images
     engine : duckduckgo_images
     shortcut : ddi
     timeout: 3.0
-    disabled : True
 
   - name : etools
     engine : etools
@@ -420,7 +418,6 @@ engines:
     content_xpath : //td/a[1][contains(@href,"=author")]/text()
     categories : general
     timeout : 7.0
-    disabled : True
     shortcut : lg
 
   - name : lobste.rs
@@ -534,7 +531,6 @@ engines:
     engine : qwant
     shortcut : qw
     categories : general
-    disabled : True
 
   - name : qwant images
     engine : qwant
@@ -616,7 +612,6 @@ engines:
     engine : startpage
     shortcut : sp
     timeout : 6.0
-    disabled : True
 
   - name : tokyotoshokan
     engine : tokyotoshokan

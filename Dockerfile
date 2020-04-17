@@ -55,6 +55,7 @@ RUN apk upgrade --no-cache \
     uwsgi-python3 \
  && pip3 install --upgrade pip \
  && pip3 install --no-cache -r requirements.txt \
+ && chmod 700 /var/lib/tor \
  && apk del build-dependencies
 
 COPY --chown=searx:searx . .
