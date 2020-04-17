@@ -1,3 +1,5 @@
+searx-tor
+=========
 
 A local instance of Searx metasearch engine using Docker and Tor.
 
